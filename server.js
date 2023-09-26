@@ -6,7 +6,7 @@ app.get('/', (req, res) => {
     res.send('Node.js on AWS')
 })
 
-app.get('/products', (req, res) => {
+app.get('/api/products', (req, res) => {
     res.send([
         {
             productId: '101',
@@ -15,6 +15,18 @@ app.get('/products', (req, res) => {
         {
             productId: '102',
             price: 150
+        }
+    ])
+})
+app.get('/api/users', (req, res) => {
+    res.send([
+        {
+            userId: '101',
+            name: 'John'
+        },
+        {
+            userId: '102',
+            name: 'Patrick'
         }
     ])
 })
